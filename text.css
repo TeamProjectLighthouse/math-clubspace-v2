@@ -1,0 +1,36 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+:root {
+  --color-empha-black: #404150;
+  --color-black: #5A5A5D;
+  --color-gray: #A6A7AE;
+  --color-light-gray: #CFD0D9;
+  --color-very-light-gray: #ECECEC;
+  --color-bluish-white: #FBFEFF;
+  --color-red: #F499AB;
+  --color-pink: #F6B4B5;
+  --color-dark-red: #DAA1A7;
+  --color-beige: #F6E3D2;
+  --color-yellow: #F4E1B6;
+  --color-orange: #F4CB9D;
+  --color-blue: #B9E6E3;
+  --color-gray-blue: #BACFC6;
+}
+
+.regular-text {
+  font-weight: normal;
+}
+
+.medium-text {
+  font-weight: 500;
+}
+
+.small-text {
+  font-size: 24px;
+}
+
+.big-text {
+  font-size: 48px;
+}

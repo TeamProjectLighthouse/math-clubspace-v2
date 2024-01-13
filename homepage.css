@@ -1,0 +1,79 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #FBFEFF;
+  overflow: hidden;
+}
+
+.homepage-box {
+  margin: 120px 148px 96px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  justify-content: space-between;
+
+  /* background-image: url("Illustration.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  position: relative; */
+}
+
+.homepage-box .nav-bar {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px
+}
+
+.homepage-box .nav-bar .item {
+  font-size: 24px;
+  color: var(--color-gray);
+  text-align: right;
+  margin: 0;
+  cursor: pointer;
+
+}
+.homepage-box .nav-bar .item:hover {
+  text-decoration: underline;
+}
+
+.homepage-box .illustration-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 98px;
+}
+
+.homepage-box .illustration-box .illustration {
+  width: 1800px;
+  height: auto;
+}
+
+.bottom-box {
+  word-spacing: 10px;
+}
+
+.check-button {
+  background-color: transparent;
+  border: 1px solid var(--color-gray);
+  border-radius: 50px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: var(--color-black);
+  text-transform: uppercase;
+  margin-left: 20px;
+  transition: background-color 0.5s;
+}
+
+.check-button:hover {
+  background-color: var(--color-gray-blue);
+}
