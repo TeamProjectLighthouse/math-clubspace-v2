@@ -6,10 +6,21 @@ html {
 body {
   height: 100%;
   width: 100%;
-  background-color: #FBFEFF;
+  background-color: var(--color-more-blue-white);
   overflow: hidden;
 }
 
+.middle-box {
+  background-color: white;
+  margin-top: 260px;
+  padding: 92px 88px 92px 105px;
+}
+
+.log-in-button {
+  background-color: var(--color-empha-black);
+}
+
+/* 
 .homepage-box {
   margin: 120px 148px 96px;
   padding: 0;
@@ -17,12 +28,6 @@ body {
   flex-direction: column;
   row-gap: 0;
   justify-content: space-between;
-
-  /* background-image: url("Illustration.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  position: relative; */
 }
 
 .homepage-box .nav-bar {
@@ -76,4 +81,4 @@ body {
 
 .check-button:hover {
   background-color: var(--color-gray-blue);
-}
+} */
