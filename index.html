@@ -4,26 +4,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Home</title>
   <link href="homepage.css" rel="stylesheet" type="text/css" />
   <link href="text.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="middle-box">
-    <p style="font-size: 24px; color: var(--color-black);">project lighthouse <span style="color: var(--color-gray-blue);"">presents</span></p>
-    <p style="font-size: 48px; color: var(--color-black);"><span style="font-weight: medium; color: var(--color-empha-black);">math clubspace</span>  is a space for  <span style="color: var(--color-empha-black);">Math Club, PKC</span></p>
-    <div style="font-size: 48px; color: var(--color-black);">check out <div class="buttons"></div> and more!</div>
-    <button class="log-in-button">log in</button>
+  <div class="homepage-box">
+    <div class="middle-box">
+      <p class="project-lighthouse">project lighthouse <span class="presents"">presents</span></p>
+      
+      <p class="description"><span class="math-clubspace">math clubspace</span>  is a space for  <span class="math-club-pkc">Math Club, PKC</span></p>
+      
+      <div class="check-out">
+        check out <span class="buttons">
+          <a class='nav-button events'>
+            <img src='images/events-dot.png' style='object-fit: contain;width: 18px;'>
+            events
+          </a>
+          <a class='nav-button news'>
+            <img src='images/news-dot.png' style='object-fit: contain;width: 18px;'>
+            news
+          </a>
+          <a class='nav-button leaderboard' href="leaderboard/leaderboard.html">
+            <img src='images/leaderboard-dot.png' style='object-fit: contain;width: 18px;'>
+            leaderboard
+          </a>
+        </span> and more!
+      </div>
+      
+      <a class="log-in-button" href="login/login.html">log in</a>
+    </div>
+  
+    <nav class="bottom-nav-box">
+      <div class="links"></div>
+      <p>© 2023</p>
+    </nav>
   </div>
-
-  <nav class="bottom-nav-box">
-    <div class="links"></div>
-    <p>© 2023</p>
-  </nav>
   
   <script src="script.js"></script>
   
