@@ -125,6 +125,7 @@ body {
   flex-direction: column;
   row-gap: 48px;
   width: 100%;
+  height: 100%;
 }
 
 .header-box {
@@ -186,72 +187,83 @@ body {
   flex-direction: row;
   column-gap: 30px;
   justify-content: space-between;
+  height: 100%;
 }
 
-.leaderboard-box {
+.dashboard-box {
+  height: 99%;
+  flex: 5;
+  display: flex;
+  flex-direction: row;
+  column-gap: 32px;
+  justify-content: space-between;
+}
+
+.dashboard-left-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  row-gap: 5%;
+  justify-content: space-between;
+}
+
+.points-box {
   background-color: white;
-  height: 719px;
-  flex: 2;
-  padding: 70px 96px 230px 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 28px;
+  border-radius: 12px;
 }
 
-.leaderboard {
-  width: 100%;
+.points {
+  margin:0;
+  font-size: 30px;
+  font-weight: medium;
+  color: var(--color-empha-black);
 }
 
-th {
-  font-size: 16px;
-  color: var(--color-gray-blue);
-  font-weight: 400;
-  height: 40px;
-  text-align: left;
-}
-th .rank {
-  width: 60px;
-}
-th .class {
-  width: 80px;
-}
-th .number {
-  width: 640px;
-}
-th .name {
-  width: 500px;
-}
-th .points {
-  width: 50px
+.membership-box {
+  background-color: white;
+  padding: 30px 28px;
+  border-radius: 12px;
 }
 
-
-td {
-  font-size: 24px;
-  font-weight: 500;
-  height: 68px;
-}
-td.rank:nth-of-type(1) {
-  color: var(--color-red);
-}
-td.rank:nth-of-type(2) {
-  color: var(--color-orange);
-}
-td.rank:nth-of-type(3) {
-  color: var(--color-yellow);
-}
-td.class,
-td.cno {
+.membership-subheading {
+  font-size: 14px;
   color: var(--color-gray);
+  margin: 6px 0;
 }
-td.name,
-td.points {
+
+.streak-box {
+  background-color: white;
+  padding: 30px 28px;
+  border-radius: 12px;
+}
+
+.redeeming-box {
+  flex: 1;
+  background-color: white;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.dashboard-heading {
+  font-size: 20px;
+  font-weight: medium;
   color: var(--color-black);
+  display: inline;
+  margin: 0;
+  vertical-align: middle;
 }
 
-
-
-.leaderboard-line {
-  border-bottom: 1px solid var(--color-gray);
-  width: 268px;
-  margin-top: 54px;
+.dashboard-icon {
+  display: inline;
+  object-fit: contain;
+  width: 20px;
+  vertical-align: middle;
 }
 
 .content-line {
@@ -261,7 +273,7 @@ td.points {
 }
 
 .guides-box {
-  flex: 1;
+  flex: 2;
   margin-top: 60px
 }
 

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="leaderboard.css" rel="stylesheet" type="text/css" />
+  <link href="dashboard.css" rel="stylesheet" type="text/css" />
   <link href="../text.css" rel="stylesheet" type="text/css" />
-  <title>Leaderboard</title>
+  <title>Dashboard</title>
 </head>
 <body>
   <div class='web-box'>
@@ -23,7 +23,7 @@
       <hr class='sidebar-line'>
       <div class='nav-bar-big-box'>
         <div class='nav-bar-box'>
-          <a class='nav-button' href='../dashboard/dashboard.html'>
+          <a class='nav-selected-button' href='../dashboard/dashboard.html'>
             <img src='../images/dashboard-dot.png' style='object-fit: cover;size: 12px;'>
             dashboard
           </a>
@@ -35,7 +35,7 @@
             <img src='../images/news-dot.png' style='object-fit: cover;size: 12px;'>
             news
           </a>
-          <a class='nav-selected-button' href='../leaderboard/leaderboard.html'>
+          <a class='nav-button' href='../leaderboard/leaderboard.html'>
             <img src='../images/leaderboard-dot.png' style='object-fit: cover;size: 12px;'>
             leaderboard
           </a>
@@ -45,8 +45,8 @@
     <div class='body-box'>
       <div class='header-box'>
         <div class='heading-box'>
-          <p class='heading'>Leaderboard</p>
-          <p class='subheading'>Your rank: 1st</p>
+          <p class='heading'>This is your math clubspace.</p>
+          <p class='subheading'>Welcome back, 10B 09!</p>
         </div>
         <div class='today-box'>
           <div class='today-date'>
@@ -57,17 +57,30 @@
         </div>
       </div>
       <div class='content-box'>
-        <div class='leaderboard-box'>
-          <table class="leaderboard">
-            <tr>
-              <th class="rank"></th>
-              <th class="class">Class</th>
-              <th class="number">Number</th>
-              <th class="name">Name</th>
-              <th class=points>Points</th>
-            </tr>
-          </table>
-          <div class="leaderboard-line"></div>
+        <div class='dashboard-box'>
+          <div class='dashboard-left-box'>
+            <div class='points-box'>
+              <div>
+                <p class='dashboard-heading'>Your points</p>
+                <img class='dashboard-icon' src='../images/points-icon.png'>     
+              </div>
+              <p class='points'>150</p>
+            </div>
+            <div class='membership-box'>
+              <p class='dashboard-heading'>Membership</p>
+              <img class='dashboard-icon' src='../images/membership-icon.png'>
+              <p class='membership-subheading'>Silver</p>
+              <img src='../images/membership.png' style='object-fit: contain; width: 100%; align-self: center;'>
+            </div>
+            <div class='streak-box'>
+              <p class='dashboard-heading'>Streak</p>
+              <img class='dashboard-icon' src='../images/streak-icon.png'>
+              <img src='../images/streak.png' style='object-fit: contain; width: 100%; align-self: center;'>
+            </div>
+          </div>
+          <div class='redeeming-box'>
+            
+          </div>
         </div>
         <div class='content-line'></div>
         <div class='guides-box'>
@@ -95,5 +108,4 @@
     </div>
   </div>
 </body>
-<script src="leaderboard.js"></script>
 </html>
