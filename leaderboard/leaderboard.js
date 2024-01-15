@@ -21,32 +21,47 @@ const database = {
     cno: 36,
     committee: false,
     ename: "LAU Ka XXX",
-    points: 175
+    points: 180
   }
 }
 
-let leaderboard = [];
+function updateLeaderboard() {
+  let leaderboard = [];
 
-for (const studentId in database) {
-  if (database.hasOwnProperty(studentId)) {
-    leaderboard.push({ studentId: studentId, data: database[studentId] });
+  for (const studentId in database) {
+    if (database.hasOwnProperty(studentId)) {
+      leaderboard.push({ studentId: studentId, data: database[studentId] });
+    }
   }
-}
 
-leaderboard.sort((a,b) => b.data.points-a.data.points);
+  leaderboard.sort((a,b) => b.data.points-a.data.points);
 
-const leaderboardElement = document.querySelector(".leaderboard");
-
-let rank = 0;
-leaderboard.forEach((student) => {
-  rank += 1;
-  leaderboardElement.innerHTML += `
-    <tr class="student">
-      <td class="rank">${rank}</td>
-      <td class="class">${student.data.class}</td>
-      <td class="cno">${student.data.cno}</td>
-      <td class="name">${student.data.ename}</td>
-      <td class="points">${student.data.points}</td>
+  const leaderboardElement = document.querySelector(".leaderboard");
+  
+  leaderboardElement.innerHTML = `
+    <tr>
+      <th class="rank"></th>
+      <th class="class">Class</th>
+      <th class="number">Number</th>
+      <th class="name">Name</th>
+      <th class=points>Points</th>
     </tr>
   `
-})
+  
+  let rank = 0;
+  leaderboard.forEach((student) => {
+    rank += 1;
+    leaderboardElement.innerHTML += `
+      <tr class="student">
+        <td class="rank">${rank}</td>
+        <td class="class">${student.data.class}</td>
+        <td class="cno">${student.data.cno}</td>
+        <td class="name">${student.data.ename}</td>
+        <td class="points">${student.data.points}</td>
+      </tr>
+    `
+  })
+}
+
+updateLeaderboard();
+// setInterval(updateLeaderboard, 10000)

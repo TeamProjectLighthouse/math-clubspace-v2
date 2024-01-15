@@ -191,8 +191,11 @@ body {
 .leaderboard-box {
   background-color: white;
   height: 719px;
-  flex: 2;
+  flex: 3;
   padding: 70px 96px 230px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .leaderboard {
