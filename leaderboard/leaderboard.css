@@ -231,14 +231,14 @@ td {
   font-weight: 500;
   height: 68px;
 }
-td.rank:nth-of-type(1) {
-  color: var(--color-red);
+.rank-1 {
+  color: var(--color-red) !important;
 }
-td.rank:nth-of-type(2) {
-  color: var(--color-orange);
+.rank-2 {
+  color: var(--color-orange) !important;
 }
-td.rank:nth-of-type(3) {
-  color: var(--color-yellow);
+.rank-3 {
+  color: var(--color-yellow) !important;
 }
 td.class,
 td.cno {

@@ -52,6 +52,6 @@ function analyseWeather(forecast) {
 updateDate();
 updateTime();
 updateWeather();
-setInterval(updateDate, 64800000);
+setInterval(updateDate, 7200000);
 setInterval(updateTime, 10000);
 setInterval(updateWeather, 3600000);

@@ -22,6 +22,22 @@ const database = {
     committee: false,
     ename: "LAU Ka XXX",
     points: 180
+  },
+  "201401001": {
+    class: "10B",
+    cname: "劉XX",
+    cno: 37,
+    committee: false,
+    ename: "LAU XX XXX",
+    points: 75
+  },
+  "201401002": {
+    class: "10B",
+    cname: "劉XX",
+    cno: 38,
+    committee: false,
+    ename: "Sunshine Egg",
+    points: 1000
   }
 }
 
@@ -53,7 +69,7 @@ function updateLeaderboard() {
     rank += 1;
     leaderboardElement.innerHTML += `
       <tr class="student">
-        <td class="rank">${rank}</td>
+        <td class="rank-${rank}" style="color: var(--color-gray-blue)">${rank}</td>
         <td class="class">${student.data.class}</td>
         <td class="cno">${student.data.cno}</td>
         <td class="name">${student.data.ename}</td>
