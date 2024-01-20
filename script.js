@@ -1,19 +1,25 @@
 function updateDate() {
   const d = new Date();
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   
   document.getElementById("date").innerHTML = `${d.getDate()} ${months[d.getMonth()]}, ${weekdays[d.getDay()]}`;
+  console.log(d.getDay());
 }
 
 function updateTime() {
   const d = new Date();
+  let h = d.getHours();
+  let m = d.getMinutes();
 
-  if (d.getHours >= 12) {
-    document.getElementById("time").innerHTML = `${d.getHours() - 12}:${d.getMinutes()} PM`; 
+  if (m < 10) {
+    m = '0'+m;
   }
-  else {
-    document.getElementById("time").innerHTML = `${d.getHours()}:${d.getMinutes()} AM`;
+  if (h >= 12) {
+    h = h - 12;
+    document.getElementById("time").innerHTML = `${h}:${m} PM`; 
+  } else {
+    document.getElementById("time").innerHTML = `${h}:${m} AM`;
   }
 }
 

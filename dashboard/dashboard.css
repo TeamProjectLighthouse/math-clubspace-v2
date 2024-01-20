@@ -248,6 +248,159 @@ body {
   background-color: white;
   height: 100%;
   border-radius: 12px;
+  padding: 52px 52px;
+  display: flex;
+  flex-direction: column;
+}
+
+.redeeming-body-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+}
+
+.prize-list-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.prize-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.prize-name {
+  font-size: 20px;
+  color: var(--color-black);
+}
+
+.prize-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-gray);
+}
+
+.prize-redeem-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* .prize-selection-box {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+}
+
+.prize-selection {
+  position: relative;
+  width: 235px;
+}
+
+.prize-selection select {
+  display: none;
+}
+
+.select-selected {
+  background-color: white;
+  box-shadow: 0px 0px 4px 3px rgba(90,90,93,7%);
+  border-radius: 8px;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 12px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--color-gray-blue) transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--color-gray-blue) transparent;
+  top: 7px;
+} */
+
+.prize-selection-box {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+}
+
+.selectdiv {
+  position: relative;
+}
+
+.selectdiv:after {
+  content: ">";
+  color: var(--color-gray-blue);
+  transform: rotate(90deg);
+  right: 20px;
+  top: 12px;
+  padding: 0 0 2px;
+  position: absolute;
+}
+
+.prize-selection {
+  background-color: white;
+  box-shadow: 0px 0px 4px 3px rgba(90,90,93,7%);
+  border-radius: 8px;
+  border: none;
+  padding: 12px 24px;
+  color: var(--color-black);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.prize-quantity-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.quantity-button {
+  background-color: white;
+  box-shadow: 0px 0px 4px 2px rgba(166,167,174,20%);
+  color: var(--color-black);
+  border: none;
+  border-radius: 100px;
+  height: 20px;
+  width: 20px;
+}
+
+.quantity-text {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--color-gray);
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.prize-redeem-button {
+  background-color: var(--color-gray-blue);
+  padding: 12px 76px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.prize-redeem-reminder {
+  font-size: 12px;
+  color: var(--color-gray);
+  margin: 0;
 }
 
 .dashboard-heading {
