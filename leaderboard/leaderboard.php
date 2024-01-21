@@ -1,3 +1,27 @@
+<?php
+  if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    try {
+        require_once "../includes/dbh.inc.php";
+        
+        $query = "SELECT * FROM studentData WHERE points != 0 ORDER BY points DESC;";
+
+        $stmt = $pdo->prepare($query);
+
+        $stmt->execute();
+
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $pdo = null;
+        $stmt = null;
+    } catch (PDOException $e) {
+        die("Query failed: " . $e->getMessage());
+    }
+  }
+  else {
+      header("Location: leaderboard.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,6 +90,33 @@
               <th class="name">Name</th>
               <th class=points>Points</th>
             </tr>
+
+            <?php
+
+              $rank = 0;
+              $leaderboard = [];
+              foreach ($results as $row) {
+                $rank = $rank + 1;
+
+                $studentId = $row["studentId"];
+                $class = $row["class"];
+                $cno = $row["cno"];
+                $name = $row["ename"];
+                $points = $row["points"];
+                
+                if ($rank <= 5) {
+                  echo "
+                    <tr class='student'>
+                        <td class='rank-{$rank}' style='color: var(--color-gray-blue)'>{$rank}</td>
+                        <td class='class'>{$class}</td>
+                        <td class='cno'>{$cno}</td>
+                        <td class='name'>{$name}</td>
+                        <td class='points'>{$points}</td>
+                      </tr>
+                  ";
+                }
+              }
+            ?>
           </table>
           <div class="leaderboard-line"></div>
         </div>
@@ -96,7 +147,7 @@
   </div>
 </body>
 <script src="../script.js"></script>
-<script src="leaderboard.js"></script>
+<!-- <script src="leaderboard.js"></script> -->
 </html>
 <!-- insert into studentData VALUES
 ( "201401123", "10B", "邱浩哲", 30, false, "YAU Ho Chit", 180 ),

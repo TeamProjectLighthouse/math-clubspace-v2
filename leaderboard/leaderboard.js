@@ -2,7 +2,7 @@ const database = {
   "201401111": {
     class: "10B",
     cname: "劉珈妤",
-    cno: 09,
+    cno: 9,
     committee: true,
     ename: "LAU Ka Yue",
     points: 100
@@ -10,7 +10,7 @@ const database = {
   "201401046": {
     class: "10B",
     cname: "劉珈孜",
-    cno: 08,
+    cno: 8,
     committee: true,
     ename: "LAU Ka Tsz",
     points: 100
@@ -79,5 +79,5 @@ function updateLeaderboard() {
   })
 }
 
-updateLeaderboard();
+// updateLeaderboard();
 // setInterval(updateLeaderboard, 10000)
