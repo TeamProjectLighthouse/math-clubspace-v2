@@ -8,231 +8,170 @@ body {
   width: 100%;
   background-color: var(--color-more-blue-white);
   letter-spacing: 1px;
+  overflow: hidden;
 }
 
-@media (min-width: 1280px) {
+.homepage-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.middle-box {
+  background-color: white;
+  border-radius: 24px;
+}
+
+.project-lighthouse {
+  font-size: var(--small-text);
+  font-weight: 300;
+  color: var(--color-black);
+}
+.presents {
+  color: var(--color-gray-blue);
+}
+
+.description {
+  font-size: var(--big-text);
+  color: var(--color-black);
+  margin: 0px;
+  margin-top: -4px;
+}
+
+.math-clubspace {
+  font-weight: 500;
+  color: var(--color-empha-black);
+}
+.math-club-pkc {
+  color: var(--color-empha-black);
+}
+
+.check-out {
+  font-size: var(--big-text);
+  color: var(--color-black);
+}
+
+.buttons {
+  display: inline-flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.nav-button {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--color-black);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 5px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  box-shadow:inset 0px 0px 0px 1px var(--color-gray);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.nav-button:hover {
+  box-shadow: none;
+  color: var(--color-bluish-white);
+}
+
+.leaderboard:hover {
+  background-color: var(--color-orange);
+}
+
+.events:hover {
+  background-color: var(--color-red);
+}
+
+.log-in-button {
+  background-color: var(--color-empha-black);
+  padding: 18px 52px;
+  border: none;
+  border-radius: 100px;
+  font-size: 28px;
+  letter-spacing: 5px;
+  font-weight: medium;
+  text-transform: uppercase;
+  color: var(--color-bluish-white);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.log-in-button:hover {
+  box-shadow: inset 0px 0px 0px 3px var(--color-empha-black);
+  background: none;
+  color: var(--color-empha-black);
+}
+
+@media (min-width: 1024px) {
   body {
-    overflow: hidden;
     --big-text: 52px;
     --small-text: 20px;
   }
   
   .homepage-box {
-    display: flex;
-    flex-direction: column;
     row-gap: 80px;
-    align-items: center;
-    justify-content: center;
     padding: 120px 92px 200px 92px;
   }
   
   .middle-box {
-    background-color: white;
     padding: 40px 23px 50px 58px;
-    border-radius: 24px;
   }
-  
-  .project-lighthouse {
-    font-size: var(--small-text);
-    font-weight: 300;
-    color: var(--color-black);
-  }
-  .presents {
-    color: var(--color-gray-blue);
-  }
-  
+
   .description {
-    font-size: var(--big-text);
-    color: var(--color-black);
-    margin: 0px;
-    margin-top: -4px;
     margin-bottom: 10px;
     line-height: 150%;
   }
   
-  .math-clubspace {
-    font-weight: 500;
-    color: var(--color-empha-black);
-  }
-  .math-club-pkc {
-    color: var(--color-empha-black);
-  }
   .check-out {
-    font-size: var(--big-text);
-    color: var(--color-black);
     margin-bottom: 60px;
   }
   
   .buttons {
-    display: inline-flex;
-    flex-direction: row;
     column-gap: 24px;
-    width: auto;
     margin-left: 12px;
     margin-right: 12px;
   }
   
-  .nav-button {
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
-    font-size: 28px;
-    font-weight: 500;
-    color: var(--color-black);
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 5px;
-    padding: 8px 16px;
-    border-radius: 100px;
-    box-shadow:inset 0px 0px 0px 1px var(--color-gray);
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  .nav-button:hover {
-    box-shadow: none;
-    color: var(--color-bluish-white);
-  }
-  
-  .events:hover {
-    background-color: var(--color-red);
-  }
   .news {
     display: none;
   }
-  .leaderboard:hover {
-    background-color: var(--color-orange);
-  }
-  
-  .log-in-button {
-    background-color: var(--color-empha-black);
-    padding: 18px 52px;
-    border: none;
-    border-radius: 100px;
-    font-size: 28px;
-    letter-spacing: 5px;
-    font-weight: medium;
-    text-transform: uppercase;
-    color: var(--color-bluish-white);
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  .log-in-button:hover {
-    box-shadow: inset 0px 0px 0px 3px var(--color-empha-black);
-    background: none;
-    color: var(--color-empha-black);
-  }
-
-  .bottom-nav
 }
 
 @media (min-width: 1920px) {
   body {
-    overflow: hidden;
     --big-text: 56px;
     --small-text: 28px;
   }
   
   .homepage-box {
-    display: flex;
-    flex-direction: column;
     row-gap: 160px;
-    align-items: center;
-    justify-content: center;
     margin-top: 360px;
     margin-bottom: 110px;
   }
 
   .middle-box {
-    background-color: white;
     padding: 92px 100px 120px 120px;
   }
 
-  .project-lighthouse {
-    font-size: var(--small-text);
-    font-weight: 300;
-    color: var(--color-black);
-  }
-  .presents {
-    color: var(--color-gray-blue);
-  }
-
   .description {
-    font-size: var(--big-text);
-    color: var(--color-black);
-    margin: 0px;
-    margin-top: -4px;
     margin-bottom: 32px;
   }
 
-  .math-clubspace {
-    font-weight: 500;
-    color: var(--color-empha-black);
-  }
-  .math-club-pkc {
-    color: var(--color-empha-black);
-  }
   .check-out {
-    font-size: var(--big-text);
-    color: var(--color-black);
     margin-bottom: 72px;
   }
 
   .buttons {
-    display: inline-flex;
-    flex-direction: row;
     column-gap: 48px;
-    width: auto;
     margin-left: 50px;
     margin-right: 50px;
   }
 
-  .nav-button {
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
-    font-size: 28px;
-    font-weight: 500;
-    color: var(--color-black);
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 5px;
-    padding: 8px 16px;
-    border-radius: 100px;
-    box-shadow:inset 0px 0px 0px 1px var(--color-gray);
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  .nav-button:hover {
-    box-shadow: none;
-    color: var(--color-bluish-white);
-  }
-
-  .events:hover {
-    background-color: var(--color-red);
-  }
   .news:hover {
     background-color: var(--color-gray-blue);
-  }
-  .leaderboard:hover {
-    background-color: var(--color-orange);
-  }
-
-  .log-in-button {
-    background-color: var(--color-empha-black);
-    padding: 18px 52px;
-    border: none;
-    border-radius: 100px;
-    font-size: 28px;
-    letter-spacing: 5px;
-    font-weight: medium;
-    text-transform: uppercase;
-    color: var(--color-bluish-white);
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  .log-in-button:hover {
-    box-shadow: inset 0px 0px 0px 3px var(--color-empha-black);
-    background: none;
-    color: var(--color-empha-black);
   }
 }
