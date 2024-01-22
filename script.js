@@ -49,6 +49,9 @@ function analyseWeather(forecast) {
   const weather = forecast.includes("fine") ? "fine" :
                   forecast.includes("sunny") ? "sunny" :
                   forecast.includes("rainy") ? "rainy" :
+                  forecast.includes("cloudy") ? "cloudy" :
+                  forecast.includes("dry") ? "dry" :
+                  forecast.includes("windy") ? "windy" :
                   "";
   imgElement.innerHTML = `
     <img class='today-img' src='../images/weather/${weather}.png'>

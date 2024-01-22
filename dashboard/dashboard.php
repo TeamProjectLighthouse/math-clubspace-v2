@@ -2,8 +2,9 @@
   if ($_SERVER["REQUEST_METHOD"] == "GET") {
     try {
         require_once "../includes/dbh.inc.php";
+        require_once "../includes/student-email.inc.php";
 
-        $query = "SELECT * FROM studentData WHERE studentId = '201401111';";
+        $query = "SELECT * FROM studentData WHERE studentId = '$studentId';";
 
         $stmt = $pdo->prepare($query);
 
@@ -37,8 +38,16 @@
       <div class='profile-box'>
         <img src='../images/profile-pic.png' class='profile-pic'>
         <div class='profile-text-box'>
-          <p class='profile-text-name'>Lau Ka Yue</p>
-          <p class='profile-text-class'>10B 09</p>
+          <p class='profile-text-name'>
+            <?php
+              echo $results["ename"];
+            ?>
+          </p>
+          <p class='profile-text-class'>
+            <?php
+              echo $results["class"] . " " . $results["cno"];
+            ?>
+          </p>
         </div>
         <button class='profile-button'>
           <img src=''>  
@@ -70,7 +79,10 @@
       <div class='header-box'>
         <div class='heading-box'>
           <p class='heading'>This is your math clubspace.</p>
-          <p class='subheading'>Welcome back, 10B 09!</p>
+          <p class='subheading'>Welcome back, 
+            <?php
+              echo $results["class"] . " " . $results["cno"];
+            ?>!</p>
         </div>
         <div class='today-box'>
           <div class='today-date'>
@@ -88,7 +100,11 @@
                 <p class='dashboard-heading'>Your points</p>
                 <img class='dashboard-icon' src='../images/points-icon.png'>     
               </div>
-              <p class='points'>150</p>
+              <p class='points'>
+                <?php
+                  echo $results["points"];
+                ?>
+              </p>
             </div>
             <div class='membership-box'>
               <p class='dashboard-heading'>Membership</p>
@@ -103,7 +119,7 @@
               <p class='streak'>
                 <?php
                   $allEvents = ["a", "b", "c"];
-                  $participatedEvents = $results["participatedEvents"];
+                  $participatedEvents = explode(",", $results["participatedEvents"]);
                 
                   $participatedBoolArray = [];
                   foreach ($allEvents as $event) {

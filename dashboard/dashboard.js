@@ -2,7 +2,7 @@ const database = {
     "201401111": {
         class: "10B",
         cname: "劉珈妤",
-        cno: 09,
+        cno: 9,
         committee: true,
         ename: "LAU Ka Yue",
         points: 100,
@@ -11,7 +11,7 @@ const database = {
     "201401046": {
         class: "10B",
         cname: "劉珈孜",
-        cno: 08,
+        cno: 8,
         committee: true,
         ename: "LAU Ka Tsz",
         points: 100,
@@ -85,3 +85,14 @@ prizes.forEach(({ name }) => {
     <option>${name}</option>
   `
 })
+
+window.onload = () => {
+  var url = document.location.href,
+        params = url.split('?')[1].split('&'),
+        data = {}, tmp;
+  for (let i=0,l=params.length;i<1;i++) {
+    tmp = params[i].split('=');
+    data[tmp[0]] = tmp[1];
+  }
+  const studentEmail = data.email;
+}
