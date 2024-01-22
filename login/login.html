@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://accounts.google.com/gsi/client" async></script>
   <link href="login.css" rel="stylesheet" type="text/css" />
   <link href="../text.css" rel="stylesheet" type="text/css" />
   <title>Log in</title>
@@ -18,9 +19,31 @@
       <p class='heading'>Welcome back!</p>
       <p class='subheading'>Log in with your school Gmail account</p>
       <img class='login-img' src='../images/login.png'>
-      <a class='login-button' href='https://www.google.com'>log in with gmail</a>
+      <!-- <a class='login-button' href='https://www.google.com'>log in with gmail</a> -->
+      <div id="g_id_onload"
+           data-client_id="120670385063-mvppv746tbq7r8i318l4vfk1lp2qhcru"
+           data-context="signin"
+           data-ux_mode="popup"
+           data-callback="onSignIn"
+           data-itp_support="true">
+      </div>
+
+      <div class="g_id_signin"
+           data-type="standard"
+           data-shape="pill"
+           data-theme="outline"
+           data-text="signin_with"
+           data-size="large"
+           data-logo_alignment="left">
+      </div>
       <p class='footnote'><span style='color: var(--color-gray-blue);'>@2024</span> project lighthouse</p>
     </div>
   </div>
 </body>
+<script>
+  function onSignIn(googleUser) {
+    console.log('User is ' + JSON.stringify(googleUser.getBasicProfile()));
+  }
+</script>
 </html>
+<!-- https://www.youtube.com/watch?v=KwOmVpd1DUA -->

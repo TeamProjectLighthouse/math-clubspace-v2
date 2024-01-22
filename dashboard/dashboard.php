@@ -1,3 +1,27 @@
+<?php
+  if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    try {
+        require_once "../includes/dbh.inc.php";
+
+        $query = "SELECT * FROM studentData WHERE studentId = '201401111';";
+
+        $stmt = $pdo->prepare($query);
+
+        $stmt->execute();
+
+        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $pdo = null;
+        $stmt = null;
+    } catch (PDOException $e) {
+        die("Query failed: " . $e->getMessage());
+    }
+  }
+  else {
+      header("Location: dashboard.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,7 +100,24 @@
                 <p class='dashboard-heading'>Streak</p>
                 <img class='dashboard-icon' src='../images/streak-icon.png'>
               </div>
-              <p class='streak'>1</p>
+              <p class='streak'>
+                <?php
+                  $allEvents = ["a", "b", "c"];
+                  $participatedEvents = $results["participatedEvents"];
+                
+                  $participatedBoolArray = [];
+                  foreach ($allEvents as $event) {
+                    array_push($participatedBoolArray, in_array($event, $participatedEvents));
+                  }
+
+                  $streak = 0;
+                  foreach ($participatedBoolArray as $event) {
+                    $streak = $event ? $streak + 1 : 0;
+                  }
+
+                  echo $streak;
+                ?>
+              </p>
             </div>
           </div>
           <div class='redeeming-box'>

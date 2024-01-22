@@ -47,7 +47,7 @@
       <hr class='sidebar-line'>
       <div class='nav-bar-big-box'>
         <div class='nav-bar-box'>
-          <a class='nav-button' href='../dashboard/dashboard.html'>
+          <a class='nav-button' href='../dashboard/dashboard.php'>
             <img src='../images/dashboard-dot.png' style='object-fit: cover;size: 12px;'>
             dashboard
           </a>
