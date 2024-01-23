@@ -57,19 +57,21 @@
       <div class='nav-bar-big-box'>
         <div class='nav-bar-box'>
           <a class='nav-selected-button' href='../dashboard/dashboard.html'>
-            <img src='../images/dashboard-dot.png' style='object-fit: cover;size: 12px;'>
+            <img src='../images/dashboard-dot.png' style='object-fit: cover;width: 12px;'>
             dashboard
           </a>
           <a class='nav-button'>
-            <img src='../images/events-dot.png' style='object-fit: cover;size: 12px;'>
+            <img src='../images/events-dot.png' style='object-fit: cover;width: 12px;'>
             events
+            <img src='../images/lock.png' style='object-fit: cover;width: 12px;'>
           </a>
           <a class='nav-button'>
-            <img src='../images/news-dot.png' style='object-fit: cover;size: 12px;'>
+            <img src='../images/news-dot.png' style='object-fit: cover;width: 12px;'>
             news
+            <img src='../images/lock.png' style='object-fit: cover;width: 12px;'>
           </a>
           <a class='nav-button' href='../leaderboard/leaderboard.php'>
-            <img src='../images/leaderboard-dot.png' style='object-fit: cover;size: 12px;'>
+            <img src='../images/leaderboard-dot.png' style='object-fit: cover;width: 12px;'>
             leaderboard
           </a>
         </div>

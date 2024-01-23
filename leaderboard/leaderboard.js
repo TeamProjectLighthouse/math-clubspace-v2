@@ -79,5 +79,17 @@ function updateLeaderboard() {
   })
 }
 
+let permission = Notification.permission;
+
+if (permission === 'granted') {
+  showNotification();
+}
+else if (permission = 'default') {
+  requestAnShowPermission();
+}
+else{
+  alert('Use normal alert');
+}
+
 // updateLeaderboard();
 // setInterval(updateLeaderboard, 10000)
