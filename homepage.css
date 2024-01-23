@@ -207,13 +207,13 @@ body {
 
   .points {
     margin:0;
-    font-size: 30px;
+    font-size: 42px;
     font-weight: medium;
     color: var(--color-empha-black);
   }
 
   .tip {
-    font-size: 12px;
+    font-size: 16px;
     color: var(--color-light-gray);
     width: 100%;
     text-align: center;
